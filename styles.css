@@ -1,0 +1,119 @@
+:root{
+  --bg1:#4a0000;
+  --bg2:#7e1a1a;
+  --card:#ffffff;
+  --text:#ffffff;
+  --muted:#d6d6d6;
+  --accent:#ffb84d;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Poppins, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  display:grid;
+  place-items:center;
+}
+
+.wrap{
+  width:min(92vw, 560px);
+  text-align:center;
+  padding:2rem 0 4rem;
+}
+
+.logo{
+  width:220px;
+  height:auto;
+  margin:1rem auto 0.75rem;
+  display:block;
+}
+
+.tagline{
+  font-weight:400;
+  margin:0 0 1.25rem;
+  font-size:1.1rem;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:saturate(140%) blur(4px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:16px;
+  padding:1.25rem 1.25rem 1.5rem;
+}
+
+.card h2{
+  font-size:1.05rem;
+  font-weight:600;
+  margin:0 0 0.75rem;
+}
+
+form{
+  display:grid;
+  gap:0.75rem;
+  margin-top:0.25rem;
+}
+
+input{
+  width:100%;
+  padding:0.85rem 0.9rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.3);
+  background:#fff;
+  color:#222;
+  outline:none;
+}
+
+input:focus{
+  border-color:#fff;
+  box-shadow:0 0 0 3px rgba(255,255,255,0.25);
+}
+
+button{
+  padding:0.9rem 1rem;
+  border:0;
+  border-radius:10px;
+  cursor:pointer;
+  background:var(--accent);
+  color:#4a2b00;
+  font-weight:600;
+}
+
+button:hover{
+  filter:brightness(1.05);
+}
+
+.or{
+  position:relative;
+  margin:1rem 0 0.5rem;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.or::before,
+.or::after{
+  content:"";
+  height:1px;
+  background:rgba(255,255,255,0.3);
+  position:absolute;
+  top:50%;
+  width:40%;
+}
+
+.or::before{left:0}
+.or::after{right:0}
+
+.signup{margin:0.5rem 0 0}
+.signup a{color:#fff;font-weight:600;text-decoration-thickness:2px}
+
+.msg{margin-top:0.5rem;color:#ffe082;min-height:1.25rem}
+
+.sr-only{position:absolute;left:-9999px}
+
+@media (min-width:640px){
+  .card{padding:1.5rem 1.75rem 1.75rem}
+}
+
